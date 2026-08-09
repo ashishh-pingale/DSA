@@ -1,1 +1,2 @@
-[j] == arr[j+1
+
+            left = mid + 1
