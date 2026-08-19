@@ -1,2 +1,1 @@
-
-            left = mid + 1
+matri
