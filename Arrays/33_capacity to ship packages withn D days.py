@@ -1,24 +1,24 @@
-class Solution(object):
-    def shipWithinDays(self, weights, days):
-        left = max(weights)
-        right = sum(weights)
 
-        while left < right:
-            mid = left + (right - left) // 2
+def shipWithinDays(weights, days):
+    left = max(weights)
+    right = sum(weights)
 
-            days_used = 1
-            current_weight = 0
+    while left < right:
+        mid = left + (right - left) // 2
 
-            for weight in weights:
-                if current_weight + weight > mid:
-                    days_used += 1
-                    current_weight = weight
-                else:
-                    current_weight += weight
+        days_used = 1
+        current_weight = 0
 
-            if days_used <= days:
-                right = mid
+        for weight in weights:
+            if current_weight + weight > mid:
+                days_used += 1
+                current_weight = weight
             else:
-                left = mid + 1
+                current_weight += weight
 
-        return left
+        if days_used <= days:
+            right = mid
+        else:
+            left = mid + 1
+
+    return left
