@@ -1,8 +1,9 @@
 from typing import Optional
 class Solution:
-def removeElements(self, head: Optional[ListNode],
+   def removeElements(self, head: 
+     Optional[ListNode],
  val: int) -> Optional[ListNode]:
- dummy = ListNode(0, head)
+  dummy = ListNode(0, head)
  prev = dummy
  while prev.next:
  if prev.next.val == val:
