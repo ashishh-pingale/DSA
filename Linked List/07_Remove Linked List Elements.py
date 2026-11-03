@@ -10,4 +10,4 @@ class Solution:
  prev.next = prev.next.next
  else:
  prev = prev.next
- return dummy.next
+ return dummy.next.next
