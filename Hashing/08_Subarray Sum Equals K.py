@@ -14,6 +14,6 @@ def subarray(nums,k):
     return count
 
 nums = [1,1,1]
-k = 2
+k = 3
 
 print(subarray(nums,k))
