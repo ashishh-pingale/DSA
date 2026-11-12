@@ -1,13 +1,14 @@
-from typing import Optional
 class Solution:
-   def removeElements(self, head: 
-     Optional[ListNode],
- val: int) -> Optional[ListNode]:
-  dummy = ListNode(0, head)
- prev = dummy
- while prev.next:
- if prev.next.val == val:
- prev.next = prev.next.next
- else:
- prev = prev.next
- return dummy.next
+    def removeElements(self, head, val):
+        dummy = ListNode(0)
+        dummy.next = head
+
+        current = dummy
+
+        while current.next:
+            if current.next.val == val:
+                current.next = current.next.next
+            else:
+                current = current.next
+
+        return dummy.next
